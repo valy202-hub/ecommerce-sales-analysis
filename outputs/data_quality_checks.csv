@@ -1,0 +1,12 @@
+﻿check,actual,expected,passed,note
+duplicate customer_id,0,0,True,Customer primary key should be unique.
+duplicate product_id,0,0,True,Product primary key should be unique.
+duplicate order_id,0,0,True,Order primary key should be unique.
+duplicate order_item_id,0,0,True,Order-line primary key should be unique.
+orders without customer,0,0,True,Every order should map to a customer.
+items without order,0,0,True,Every line item should map to an order.
+items without product,0,0,True,Every line item should map to a product.
+missing values in core order fields,0,0,True,Required order fields should be populated.
+non-positive quantities,0,0,True,Quantity should be positive.
+discount out of range,0,0,True,Discount is stored as a fraction from 0 to 1.
+signup after first recorded order,0,0,True,"For customers with orders, signup should not be after first order."
